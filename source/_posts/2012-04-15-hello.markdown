@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Hello, World"
+date: 2012-04-15 09:32
+comments: true
+categories: 
+---
+My initiation into blogging
+
+
+``` ruby Hello World
+class HelloWorld
+	def hello
+		puts("Hello, World\n")
+		puts("Yes, it's a cheesy start of a blog")
+	end
+end
+```
