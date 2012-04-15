@@ -4,7 +4,7 @@
   <title><![CDATA[Datagrams on the Wings of Pigeons]]></title>
   <link href="http://thutch.github.com/atom.xml" rel="self"/>
   <link href="http://thutch.github.com/"/>
-  <updated>2012-04-15T09:28:49-05:00</updated>
+  <updated>2012-04-15T09:35:41-05:00</updated>
   <id>http://thutch.github.com/</id>
   <author>
     <name><![CDATA[Tim Hutchison]]></name>
@@ -12,5 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hello, World]]></title>
+    <link href="http://thutch.github.com/blog/2012/04/15/hello/"/>
+    <updated>2012-04-15T09:32:00-05:00</updated>
+    <id>http://thutch.github.com/blog/2012/04/15/hello</id>
+    <content type="html"><![CDATA[<p>My initiation into blogging</p>
+
+<figure class='code'><figcaption><span>Hello World</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">HelloWorld</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">hello</span>
+</span><span class='line'>      <span class="nb">puts</span><span class="p">(</span><span class="s2">&quot;Hello, World</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span class='line'>      <span class="nb">puts</span><span class="p">(</span><span class="s2">&quot;Yes, it&#39;s a cheesy start of a blog&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
 </feed>
