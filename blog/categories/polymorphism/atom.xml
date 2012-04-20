@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Polymorphism | Datagrams on the Wings of Pigeons]]></title>
   <link href="http://thutch.github.com/blog/categories/polymorphism/atom.xml" rel="self"/>
   <link href="http://thutch.github.com/"/>
-  <updated>2012-04-20T00:06:10-05:00</updated>
+  <updated>2012-04-20T00:29:06-05:00</updated>
   <id>http://thutch.github.com/</id>
   <author>
     <name><![CDATA[Tim Hutchison]]></name>
@@ -29,7 +29,7 @@
 <p><blockquote><p>object-oriented recursion represents the invocations themselves as objects, sending the same message to different objects</p><footer><strong>Kent Beck, The Smalltalk Report</strong> <cite><a href='http://www.macqueen.us/smalltalkReport/ST/ST09/27be.pdf'>Object-Oriented Recursion</a></cite></footer></blockquote></p>
 
 <p><span class='pullquote-right' data-pullquote='a quick review of procedural recursion'>
-Procedural recursion is a function that calls itself with different parameters until a base case is met.  Let's have a quick review of procedural recursion using a purposely verbose factorial function;
+Procedural recursion is coded as a function that calls itself with different parameters until a base case is met.  Let's have a quick review of procedural recursion using a purposely verbose factorial function;
 </span>
 ```ruby A puposely verbose factorial function
 def factorial aNumber</p>
@@ -302,10 +302,10 @@ player2GoalWell.next_well = well01
     player2GoalWell is 0  
 </code></pre>
 
-<p><span class='pullquote-right' data-pullquote='Have fun recursion-ing!!'>
-In summary, I hope to have demonstrated object-oriented recursion is a way to make your objects perform more work. Leaving the responsiblity to the objects to handle the base cases. It really is an invockation of the same method over different objects.    Object-oriented recursion demonstrates the power of polymorphism.</p>
+<p><span class='pullquote-right' data-pullquote='Have fun OO recursion-ing!!'>
+This Mancala Well example demonstrates Object-Oriented Recursion by each Well type performing their take_seed operation per the type; Well and GoalWell. Each well delegates to the next well to handle updating their seed count,  decrementing from the seeds being sown and testing for the base case to end the sow operation.</p>
 
-<p> Have fun recursion-ing!!
+<p> Have fun OO recursion-ing!!
 </span></p>
 
 <p>The source for this example can be found at <a href=https://gist.github.com/2395565>Gist 2395565</a></p>
