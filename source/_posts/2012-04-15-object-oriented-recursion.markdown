@@ -4,16 +4,17 @@ title: "Object-Oriented Recursion"
 date: 2012-04-15 11:16
 comments: true
 categories: [OO, Recursion, Polymorphism]
-publish: false
+publish: true
 ---
 
 To understand recursion,  you must first understand recursion... 
 
-Google "recursion" and the top result will be "Did you mean: <a href=https://www.google.com/search?source=ig&hl=en&rlz=&q=recursion&oq=recursion&aq=f&aqi=n1g10&aql=&gs_nf=1&gs_l=igoogle.3..5j0l10.597.1713.0.2449.7.7.0.0.0.0.63.375.7.7.0.>recursion</a>"
+Google "recursion" and the top result will be "Did you mean: [_recursion_](https://www.google.com/search?source=ig&hl=en&rlz=&q=recursion&oq=recursion&aq=f&aqi=n1g10&aql=&gs_nf=1&gs_l=igoogle.3..5j0l10.597.1713.0.2449.7.7.0.0.0.0.63.375.7.7.0.)"
 
 In college one of my professors had stated that recursion is a method for making the computer do most of the work for you.  Its a way to reduce a a complex algorthm to a few lines with a base case.  
-
+   
 But object-oriented recursion is a bit different;
+<!-- more -->
 
 {% blockquote Kent Beck, The Smalltalk Report http://www.macqueen.us/smalltalkReport/ST/ST09/27be.pdf Object-Oriented Recursion %}
 object-oriented recursion represents the invocations themselves as objects, sending the same message to different objects
@@ -21,7 +22,8 @@ object-oriented recursion represents the invocations themselves as objects, send
 
 
 {% pullquote %}
-Procedural recursion is a function that calls itself with different parameters until a base case is met.  Let's have {"a quick review of procedural recursion"} using a purposely verbose factorial function;
+Procedural recursion is coded as a function that calls itself with different parameters until a base case is met.  
+Let's have {"a quick review of procedural recursion"} using a purposely verbose factorial function;
 {% endpullquote %}
 ```ruby A puposely verbose factorial function
 def factorial aNumber
@@ -35,7 +37,7 @@ def factorial aNumber
 	return result
 end
 ```  
-In this case if we were to execute this function with the number three, the execution would look something like this (the verbosity will make sense)
+Okay, so we need to know the factorial of 3. We have written the above function and now we'll execute it with the number three. The execution would look something like this (the verbosity will make sense)
 
 
     #factorial(3)  
@@ -53,7 +55,7 @@ In this case if we were to execute this function with the number three, the exec
     recursiveCallResult = null  
     result = 1  
 
-  It is at this point that the base case of the function is met and the operation begins to "unwind" back up to the original call;
+  The base case of the function is met and the operation begins to "unwind" back up to the original call;
 
     #factorial(2)    
     recursiveCallResult = 1  
@@ -73,11 +75,11 @@ As it turns out, the factorial of 3 is 6!! Cool!
 
 Kent Beck's article on <a href=http://www.macqueen.us/smalltalkReport/ST/ST09/27be.pdf>Object-Oriented Reursion</a> was an epiphany to me when I first read it in 1996.  It opened my eyes to different ways of working with objects.  It made even more clear to me the concept of <a href=http://www.wordiq.com/definition/Polymorphism_in_object-oriented_programming>polymorphism</a>.  To be able to send the same message to different objects is a powerful concept.  
 
- I have used the Peano Number example from the article when learning a new programming language as it helps me to understand how polymorphism is applied in that language.  Also the example is just plain fun.  If interested, the translations are available for <a href=https://github.com/thutch/PeanoNumber.Ruby>Ruby</a>, <a href=https://github.com/thutch/PeanoNumber.CSharp>C#</a>, and <a href=https://github.com/thutch/PeanoNumber.DartLang>Dart</a>.
+ I have used the Peano Number example from the article when teaching myself a new programming language as it helps me to understand how polymorphism can be applied in that language.  Also the example is just plain fun.  If interested, the translations are available for <a href=https://github.com/thutch/PeanoNumber.Ruby>Ruby</a>, <a href=https://github.com/thutch/PeanoNumber.CSharp>C#</a>, and <a href=https://github.com/thutch/PeanoNumber.DartLang>Dart</a>.
 
 #### Mancala & OO Recursion
 
-Recently I participated in a <a href=http://dallashackclub.com/>Dallas Hack Club</a> where the kata for that night was the <a href=https://gist.github.com/2153731>Mancala game</a>.  "Mancala is a two player game where each person takes turns "sowing" seeds from well to well" (Description from the <a href=https://gist.github.com/2153731>gist</a>)
+Recently I participated in a <a href=http://dallashackclub.com/>Dallas Hack Club</a> where the kata for that night was the <a href=https://gist.github.com/2153731>Mancala game</a>.  Mancala is a two player game where each person takes turns "sowing" seeds from well to well.  
 
 One of the classes that we created for the Mancala game kata was the Well.  A Mancala 'well' holds a number of seeds and is owned by a player.  On a players turn, the player will take all the seeds from a selected well,  then "sow" a single seed to each well starting on the well to the right till all the seeds picked up from the initial well have been "sown", then the next player takes their turn.  
 
@@ -137,7 +139,7 @@ The sow method is the starting method for the operation.
 1) In this method, the current number of the seeds is held in a temporary variable "current_seeds"; `current_seeds = self.seeds`  
 2) The seeds instVar is set to 0; `self.seeds = 0`  
 3) Lastly, the well's next_well is requested to take_seed sending the current_seeds and starting well's owner for the parameters.
-this line of code `self.next_well.take_seed(current_seeds, self.owner)` and begins the object-oriented recursive operation,  
+This line of code `self.next_well.take_seed(current_seeds, self.owner)` begins the object-oriented recursive operation,  
 
 Lets have a closer look at the `take_seed` method;
 ```ruby  Well class take_seed method
@@ -264,11 +266,11 @@ Each of the wells count for seeds should be
 
 
 {% pullquote %}
-In summary, I hope to have demonstrated object-oriented recursion is a way to make your objects perform more work. Leaving the responsiblity to the objects to handle the base cases. It really is an invockation of the same method over different objects.    Object-oriented recursion demonstrates the power of polymorphism.   
+This Mancala Well example demonstrates Object-Oriented Recursion with two well types, Well and GoalWell being polymorphic, performing the take_seed operation. Each well delegates to the next well to handle updating their seed count, decrementing from the seeds being sown and testing for the base case to end the sow operation.
 
- {"Have fun recursion-ing!!"}
+ {"Have fun OO recursion-ing!!"}
 {% endpullquote %}
 
 
-The source for this example can be found at <a href=https://gist.github.com/2395565>Gist 2395565</a>
+The source for this example can be found at <a href=https://gist.github.com/2395565>Mancala Well</a>
 
