@@ -172,7 +172,7 @@ reusult = 6
 Object-Oriented Recursion is a way to make the objects do all the work!!
 </span></p>
 
-<p>Kent Beck&#8217;s article on <a href=http://www.macqueen.us/smalltalkReport/ST/ST09/27be.pdf>Object-Oriented Reursion</a> was an epiphany to me when I first read it in 1996.  It opened my eyes to different ways of working with objects.  It made even more clear to me the concept of <a href=http://www.wordiq.com/definition/Polymorphism_in_object-oriented_programming>polymorphism</a>.  To be able to send the same message to different objects is a powerful concept.</p>
+<p>Kent Beck&#8217;s article on <a href=http://www.macqueen.us/smalltalkReport/ST/ST09/27be.pdf>Object-Oriented Recursion</a> was an epiphany to me when I first read it in 1996.  It opened my eyes to different ways of working with objects.  It made even more clear to me the concept of <a href=http://www.wordiq.com/definition/Polymorphism_in_object-oriented_programming>polymorphism</a>.  To be able to send the same message to different objects is a powerful concept.</p>
 
 <p> I have used the Peano Number example from the article when teaching myself a new programming language as it helps me to understand how polymorphism can be applied in that language.  Also the example is just plain fun.  If interested, the translations are available for <a href=https://github.com/thutch/PeanoNumber.Ruby>Ruby</a>, <a href=https://github.com/thutch/PeanoNumber.CSharp>C#</a>, and <a href=https://github.com/thutch/PeanoNumber.DartLang>Dart</a>.</p>
 
@@ -223,9 +223,9 @@ The &#8216;Well&#8217; class for the Mancala game presented an excellent opportu
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="k">def</span> <span class="nf">take_seed</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">player</span><span class="p">)</span>
-</span><span class='line'>    <span class="nb">self</span><span class="o">.</span><span class="n">seeds</span> <span class="o">+=</span> <span class="mi">1</span>
-</span><span class='line'>    <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">-</span> <span class="mi">1</span>
 </span><span class='line'>    <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</span><span class='line'>      <span class="nb">self</span><span class="o">.</span><span class="n">seeds</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span class='line'>      <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">-</span> <span class="mi">1</span>
 </span><span class='line'>      <span class="nb">self</span><span class="o">.</span><span class="n">next_well</span><span class="o">.</span><span class="n">take_seed</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">player</span><span class="p">)</span>
 </span><span class='line'>    <span class="k">end</span>
 </span><span class='line'>  <span class="k">end</span>
@@ -233,7 +233,7 @@ The &#8216;Well&#8217; class for the Mancala game presented an excellent opportu
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Each well knows about the well to its right, its next_well, so data structure is a circular linked list.</p>
+<p>Each well knows about the well to its right, its next_well, so the data structure is a circular linked list.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
