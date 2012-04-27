@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Polymorphism | Datagrams on the Wings of Pigeons]]></title>
   <link href="http://thutch.github.com/blog/categories/polymorphism/atom.xml" rel="self"/>
   <link href="http://thutch.github.com/"/>
-  <updated>2012-04-26T08:23:35-05:00</updated>
+  <updated>2012-04-27T13:48:35-05:00</updated>
   <id>http://thutch.github.com/</id>
   <author>
     <name><![CDATA[Tim Hutchison]]></name>
@@ -124,10 +124,10 @@ self.next_well.take_seed(current_seeds, self.owner)
 
 <p>  def take_seed(count, player)</p>
 
-<pre><code>if count &gt; 0
-  self.seeds += 1
+<pre><code>  self.seeds += 1
   count = count - 1
-  self.next_well.take_seed(count, player)
+  if count &gt; 0
+   self.next_well.take_seed(count, player)
 end
 </code></pre>
 

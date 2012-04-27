@@ -4,7 +4,7 @@
   <title><![CDATA[Datagrams on the Wings of Pigeons]]></title>
   <link href="http://thutch.github.com/atom.xml" rel="self"/>
   <link href="http://thutch.github.com/"/>
-  <updated>2012-04-26T08:23:35-05:00</updated>
+  <updated>2012-04-27T13:48:35-05:00</updated>
   <id>http://thutch.github.com/</id>
   <author>
     <name><![CDATA[Tim Hutchison]]></name>
@@ -151,10 +151,10 @@ The &#8216;Well&#8217; class for the Mancala game presented an excellent opportu
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="k">def</span> <span class="nf">take_seed</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">player</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span>
 </span><span class='line'>      <span class="nb">self</span><span class="o">.</span><span class="n">seeds</span> <span class="o">+=</span> <span class="mi">1</span>
 </span><span class='line'>      <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">-</span> <span class="mi">1</span>
-</span><span class='line'>      <span class="nb">self</span><span class="o">.</span><span class="n">next_well</span><span class="o">.</span><span class="n">take_seed</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">player</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</span><span class='line'>       <span class="nb">self</span><span class="o">.</span><span class="n">next_well</span><span class="o">.</span><span class="n">take_seed</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">player</span><span class="p">)</span>
 </span><span class='line'>    <span class="k">end</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'><span class="k">end</span>
