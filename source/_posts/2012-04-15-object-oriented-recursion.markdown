@@ -73,7 +73,7 @@ As it turns out, the factorial of 3 is 6!! Cool!
 {"Object-Oriented Recursion"} is a way to make the objects do all the work!!
 {%endpullquote%}  
 
-Kent Beck's article on <a href=http://www.macqueen.us/smalltalkReport/ST/ST09/27be.pdf>Object-Oriented Reursion</a> was an epiphany to me when I first read it in 1996.  It opened my eyes to different ways of working with objects.  It made even more clear to me the concept of <a href=http://www.wordiq.com/definition/Polymorphism_in_object-oriented_programming>polymorphism</a>.  To be able to send the same message to different objects is a powerful concept.  
+Kent Beck's article on <a href=http://www.macqueen.us/smalltalkReport/ST/ST09/27be.pdf>Object-Oriented Recursion</a> was an epiphany to me when I first read it in 1996.  It opened my eyes to different ways of working with objects.  It made even more clear to me the concept of <a href=http://www.wordiq.com/definition/Polymorphism_in_object-oriented_programming>polymorphism</a>.  To be able to send the same message to different objects is a powerful concept.  
 
  I have used the Peano Number example from the article when teaching myself a new programming language as it helps me to understand how polymorphism can be applied in that language.  Also the example is just plain fun.  If interested, the translations are available for <a href=https://github.com/thutch/PeanoNumber.Ruby>Ruby</a>, <a href=https://github.com/thutch/PeanoNumber.CSharp>C#</a>, and <a href=https://github.com/thutch/PeanoNumber.DartLang>Dart</a>.
 
@@ -103,16 +103,16 @@ class Well
   end
 
   def take_seed(count, player)
-    self.seeds += 1
-    count = count - 1
-    if count > 0
-      self.next_well.take_seed(count, player)
+      self.seeds += 1
+      count = count - 1
+      if count > 0
+       self.next_well.take_seed(count, player)
     end
   end
 end 
 ```
 
-Each well knows about the well to its right, its next_well, so data structure is a circular linked list.  
+Each well knows about the well to its right, its next_well, so the data structure is a circular linked list.  
 ``` ruby
 player1 = :player1
 well01 = Well.new(player1)
