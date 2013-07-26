@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://thutch.github.com
+url: http://thutch.github.io
 title: Datagrams on the Wings of Pigeons
 #subtitle: How did these 1's and 0's get here? 
 subtitle: RFC 1149 
@@ -95,7 +95,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:datagramsonthewingsofpigeons
+disqus_short_name:
 disqus_show_comment_count: true
 
 # Google Analytics
