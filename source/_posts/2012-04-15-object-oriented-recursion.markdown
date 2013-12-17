@@ -31,7 +31,7 @@ def factorial aNumber
 	  result = 1
 	else
 	  recursiveCallResult = (factorial(aNumber - 1))
-	  result = aNumber * factorialResult 
+	  result = aNumber * recursiveCallResult 
 	end
 
 	return result
@@ -268,7 +268,7 @@ Each of the wells count for seeds should be
 {% pullquote %}
 This Mancala Well example demonstrates Object-Oriented Recursion with two well types, Well and GoalWell being polymorphic, performing the take_seed operation. Each well delegates to the next well to handle updating their seed count, decrementing from the seeds being sown and testing for the base case to end the sow operation.
 
- {"Have fun OO recursion-ing!!"}
+ {"Have fun with OO recursion!!"}
 {% endpullquote %}
 
 
