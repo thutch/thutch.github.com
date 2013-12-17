@@ -16,7 +16,7 @@ In college one of my professors had stated that recursion is a method for making
 But object-oriented recursion is a bit different;
 <!-- more -->
 
-{% blockquote Kent Beck, The Smalltalk Report http://www.macqueen.us/smalltalkReport/ST/ST09/27be.pdf Object-Oriented Recursion %}
+{% blockquote Kent Beck http://www.macqueen.us/smalltalkReport/ST/ST09/27be.pdf Object-Oriented Recursion The Smalltalk Report%}
 object-oriented recursion represents the invocations themselves as objects, sending the same message to different objects
 {% endblockquote %}
 
